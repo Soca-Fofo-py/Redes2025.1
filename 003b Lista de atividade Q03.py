@@ -1,0 +1,6 @@
+print("Este código calcula o montante gerado por um capital aplicado a juros compostos!")
+c = int(input("Digite o valor do capital inicial: "))
+i = int(input("Digite o valor da taxa (%) em um valor inteiro: "))
+t = int(input("Digite o tempo em meses: "))
+montante = c*((1+i/100)**t)
+print ("O montante total eh: ", montante)

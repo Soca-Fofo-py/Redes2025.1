@@ -1,0 +1,5 @@
+print ("Este código ler os valores de a, b e c, e cálcula as raizes de uma equação de segundo grau associada!")
+a = int(input("Digite o valor de (a):"))
+b = int(input("Digite o valor de (b):"))
+c = int(input("Digite o valor de (C):"))
+print("Os valores de x são respectivamente: X1=",(-b+(b**2-4*a*c)**0.5)/(2*a),"e X2=",(-b-(b**2-4*a*c)**0.5)/(2*a))
