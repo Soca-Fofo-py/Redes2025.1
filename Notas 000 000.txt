@@ -1,0 +1,4 @@
+ord = mostra número
+chr = mostra caractere
+
+len = tamanho
