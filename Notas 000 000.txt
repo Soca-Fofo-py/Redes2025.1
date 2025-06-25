@@ -2,3 +2,16 @@ ord = mostra número
 chr = mostra caractere
 
 len = tamanho
+
+l = [5,8,3]
+l.sort() # --> gera : [3,5,8]
+l.sort(reverse=True) # --> gera : [8,5,3]
+
+l2 = ["Zi","Ti","Gio"]
+l2.sort() # --> ["Gio","Ti","Zi"]
+
+l3 = ["Zi",30]
+l3.sort() # --> ERRO, não se compara strings com inteiros!
+
+filhos = [["Zi",30] , ["Gio",20] , ["Ti",31]]
+filhos.sort (key = lambda x:x[1]) # --> [["Gio",20] , ["Zi",30] , ["Ti",31]]
