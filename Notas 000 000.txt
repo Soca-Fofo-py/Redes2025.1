@@ -15,3 +15,13 @@ l3.sort() # --> ERRO, não se compara strings com inteiros!
 
 filhos = [["Zi",30] , ["Gio",20] , ["Ti",31]]
 filhos.sort (key = lambda x:x[1]) # --> [["Gio",20] , ["Zi",30] , ["Ti",31]]
+
+##############################################################################
+filter in python: retorna se True ou False
+l = [1,3,2,5,8,14,7]
+
+pares = filter(lambda x: x%2==0,l) # --> <filter object at 0x000001DFBABD63B0>
+pares = list(filter(lambda x: x%2==0,l)) # -->  [2, 8, 14]
+
+map in python:
+pares = list(map(lambda x: x + 1)) # -->  
