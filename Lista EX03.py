@@ -11,7 +11,8 @@ for n in range(len(lstNomes)):
 
 print(lstNotas)
 
-pos = 0
-for nome in range (len(lstNomes)):
+
+for pos in range (len(lstNomes)):
+    print(lstNomes[pos],lstNotas[pos])
     
 
