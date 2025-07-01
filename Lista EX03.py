@@ -13,6 +13,9 @@ print(lstNotas)
 
 
 for pos in range (len(lstNomes)):
-    print(lstNomes[pos],lstNotas[pos])
-    
-
+    print(lstNomes[pos],lstNotas[pos], end="") #### end=""
+    ######################################################
+    if (lstNotas[pos][0] + lstNotas[pos][1]) / 2 >= 60:
+        print(" APROVADO",end="\n")
+    else:
+        print(" REPROVADO!!!",end="\n")
