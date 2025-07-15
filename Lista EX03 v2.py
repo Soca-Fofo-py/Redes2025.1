@@ -9,7 +9,7 @@ lstNotas = []
 for n in range(len(lstNomes)):
     lstNotas.append([random.randint(0,100),random.randint(0,100),random.randint(0,100)])
 
-#print(lstNotas) ################# Opicional
+print(lstNotas) ################# Opicional
 
 
 for pos in range (len(lstNomes)):
