@@ -1,0 +1,3 @@
+https://api.cartola.globo.com/clubes
+
+https://api.cartola.globo.com/atletas/mercado

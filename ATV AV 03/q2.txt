@@ -1,0 +1,11 @@
+https://www.quora.com/What-is-the-total-number-of-palindrome-between-10-and-100000
+
+For 2 digit numbers: The tens place is filled in 9 ways, the units place is the same as the tens - hence 9 numbers
+
+For 3 digit numbers: the first and last digit can be filled in 9 ways and the middle name in 10 ways, hence 90
+
+For 4 digit numbers: the first and last digit can be filled in 9 ways. The second place in 10 ways and the third place is the same as the second, hence total = 9 x 10 = 90 ways.
+
+For 5 digit numbers: the first and last digit in 9 ways; the second and fourth place in 10 ways; the middle number in 10 ways, hence 9x10x10 = 900 ways
+
+So 9+90+90+900 = 1089 ways
