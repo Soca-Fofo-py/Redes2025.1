@@ -6,7 +6,7 @@ descobertas. O usuário vence quando descobre as duas palavras em até sete
 tentativas. Mostre as palavras com as mesmas cores do referido sítio e crie uma lista
 com as palavras válidas (se o usuário digitar outra, não será aceita).
 '''
-# Rawenn Ellen
+# 
 
 import random
 palavras = (

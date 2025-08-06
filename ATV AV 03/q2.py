@@ -4,11 +4,10 @@
 esquerda para a direita ou da direita para a esquerda. Ex: 98189 é palíndromo. Não
 use strings na sua resposta.
 '''
-# Rawenn Ellen
+
 try:
-    # Criando função para retornar o reverso de um número! -> "Quando se tem um martelo, tudo se parece com um prego!"
+    # Criando função para retornar o reverso de um número!
     def reverso(n):
-        # Reconhece as 4 linhas abaixo?  :D
         reverso = 0
         while n > 0:
             reverso = reverso*10 + n%10

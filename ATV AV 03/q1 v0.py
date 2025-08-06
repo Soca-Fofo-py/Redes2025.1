@@ -12,7 +12,15 @@ h) ler o “banco de dados” de um arquivo (perguntar o nome do arquivo).
 Em todas as operações que requerem entrada de CPF e MAC adresses, valide-os.
 '''
 # 5e, 6f, 
-# Rawenn Ellen
+import json, cpf
+################################################
+'''
+import json
+d = json.loads(texto) # Carrega banco de dados
+t = json.dumps(d) #Converte dicionário em texto
+'''
+################################################
+
 
 comando = 9 # De 1 a 0, o 9 estava sobrando!
 tabela_cpf_mac = {12345678900:['00:1A:2B:3C:4D:5E','00:1B:2B:3A:4D:5C'] , 78945612300:['00:1C:2A:3B:4D:5E'] , 
@@ -42,7 +50,7 @@ while comando != 0:
             CPF = int(input("Digite o CPF ao qual deseja cheacar os MACs a ele vinculado: "))
             if len(str(CPF)) == 11: 
                 if CPF in tabela_cpf_mac.keys():
-                    print(f"listando os MAC adresses vinculados ao CPF: {CPF}")
+                    print(f"Listando os MAC adresses vinculados ao CPF: {CPF}")
                     print(tabela_cpf_mac.get(CPF,"Não há MACs vinculados a esse CPF"))
                 else: print(f"Esse CPF '{CPF}' não está cadastrado!")
             else: print(f"O CPF: {CPF} é invalido!") # Diferente de 11
