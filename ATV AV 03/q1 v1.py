@@ -15,8 +15,8 @@ import json
 import cpf # Importa uma função para validação de CPF!
 
 
-tabela_cpf_mac = {12345678900:['00:1A:2B:3C:4D:5E','00:1B:2B:3A:4D:5C'] , 78945612300:['00:1C:2A:3B:4D:5E'] , 
-                  74185296300:[], '11630408433':[]} #
+tabela_cpf_mac = {12345678900:['00:1A:2B:3C:4D:5E'] , 78945612300:['00:1C:2A:3B:4D:5E'] , 
+                   "11630408433":[]} #
 #tabela_cpf_mac['11630408433'] = 145
 #print(tabela_cpf_mac)
 
@@ -80,20 +80,30 @@ if opcao == 2:
     print("Adicionar MAC address a um CPF\n")
     var_3 = input("Digite a qual CPF deseja cadastrar um endereço MAC: ")
     if cpf.cpf_valido(var_3) == True:
-        if var_3 in tabela_cpf_mac:
+        if (str(var_3)) in tabela_cpf_mac:
             var_4 = input("Digite o endereço MAC que deseja cadastrar: ")
             if check_mac(var_4) == True:
+                lista_temp = []
                 lista_temp = tabela_cpf_mac[var_3]
-                tabela_cpf_mac[var_3] = lista_temp.append(var_4)
-                print(var_3,lista_temp,var_4,"test")
+                #print("temp",lista_temp,type(var_3),type(lista_temp)) #############
+                lista_temp = lista_temp.append(var_4)
+                print(tabela_cpf_mac[var_3],"455") ##############
+                tabela_cpf_mac[var_3] = lista_temp #???????????????????????
+                print("temp",tabela_cpf_mac[var_3],456)
+                print(var_3,"\n",
+                      tabela_cpf_mac,"\n",
+                      var_4,
+                      "test") ####
             else:
                 print("O endereço MAC que deseja cadastrar é inválido!")
         else:
             print("O CPF informado não está cadastrado!")
     else:
         print("CPF Inválido!")
-###################################################################################################################
+    #print(var_3,lista_temp,var_4,"test2")####
 
+###################################################################################################################
+'''
 elif opcao == 21:
     print("remover mac")
     #amigos_ate(10000)
@@ -102,7 +112,7 @@ elif opcao == 21:
     #amigos_ate(10000)
 else:
     print ("Opcao invalida.")
-
+'''
 print(tabela_cpf_mac)
 
 
