@@ -14,8 +14,8 @@ Em todas as operações que requerem entrada de CPF e MAC adresses, valide-os.
 import json
 import cpf # Importa uma função para validação de CPF!
 
-
-tabela_cpf_mac = {12345678900:['00:1A:2B:3C:4D:5E','00:1C:2A:3B:4D:5E'] ,'11630408433':['00:1A:2B:3C:4D:5E']} #
+tabela_cpf_mac = {}
+#tabela_cpf_mac = {12345678900:['00:1A:2B:3C:4D:5E','00:1C:2A:3B:4D:5E'] ,'11630408433':['00:1A:2B:3C:4D:5E']}
 #print(tabela_cpf_mac) # testes
 
 ###################################################################################################################
@@ -161,6 +161,44 @@ if opcao == 6: # f
         print("CPF Inválido!")
 ###################################################################################################################
 ###################################################################################################################
+if opcao == 7: # g
+        
+        try:
+            nome_arquivo = input('qual vai ser o nome do arquivo:')
+            arquivo = open(nome_arquivo, 'r')
+            arquivo.close
+            print('esse arquivo ja exite!!!')
+            #decisao = input('esse arquivo ja esta exite deseja apagar tudo oque tem nele?\n' +
+            #      '1 - sim\n' +
+            #      '2 - nao\n')
+            #if decisao == 1:
+            #    fd = open (arquivo, "w")
+        except FileNotFoundError:
+            arquivo = open(nome_arquivo, "w")
+            for a in tabela_cpf_mac.keys:
+                arquivo.write( a + '_' + str(tabela_cpf_mac[a]) + ' ' +'\n')
+            arquivo.close()
+        except:
+            print('houve algum erro tente novamente')
+###################################################################################################################
+###################################################################################################################
+if opcao == 8: # h
+    try:
+        fd = open(input(''),'r')
+        ##### TIRA OS ESPACOS #####
+        arquivo = (fd.read()).split()
+        for dados in arquivo:
+        ##### TIRA OS OS COLCHETES E A VIRGULA DA LISTA DE MACS #####
+            organizar += [dados.replace('[','').replace(']','').replace(',',' ').split('_')]
+        for a in organizar:
+            ##### EXIBE OS DADOS #####
+            print(f'CPF:{a[0]} MAC:{a[1]}')
+        fd.close() 
+    except FileNotFoundError:
+        print('esse arquivo nao existe!!!')
+    except:
+        print('houve algum erro tente novamente')
+###################################################################################################################
 
 # print(tabela_cpf_mac) # testes
 
@@ -168,16 +206,9 @@ if opcao == 6: # f
 
 ################################################
 '''
-tabela_cpf_mac = {12345678900:['00:1A:2B:3C:4D:5E','00:1B:2B:3A:4D:5C'] , 78945612300:['00:1C:2A:3B:4D:5E'] , 
-                  74185296300:[]}
-
 import json
-d = json.loads(texto) # Carrega banco de dados
-t = json.dumps(d) #Converte dicionário em texto
-
-try:
-except:
-    print("Em algum lugar, de alguma forma, algo deu errado e a culpa provavelmente foi sua!")
+d = json.loads(texto)     # Carrega banco de dados
+t = json.dumps(d)         #Converte dicionário em texto
 
 '''
 ################################################
