@@ -1,5 +1,5 @@
 Este programa 
 foi feito com python
-opção de escrita
-opção de escrita 2
-opção de escrita 2
+OpÃ§Ã£o de escrita
+OpÃ§Ã£o de escrita 2
+OpÃ§Ã£o de escrita 3
