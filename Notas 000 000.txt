@@ -25,3 +25,5 @@ pares = list(filter(lambda x: x%2==0,l)) # -->  [2, 8, 14]
 
 map in python:
 pares = list(map(lambda x: x + 1)) # -->  
+
+LISTAS: https://docs.python.org/3/library/string.html
